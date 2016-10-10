@@ -9,6 +9,7 @@ body {
   margin-right: auto;
   
   width: 960px;
+  height: 1000px;
   
   background-color: white;
   
@@ -17,19 +18,27 @@ body {
 #navbar {
   
   width; 940px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  color: #c5b358;
   
 }
 
 li {
-  display: inline-block;
+  display: inline;
   margin: 20px;
   font-size: 20px;
-  
 }
 
 li.templist {
   display: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a :hover {
+  color: gray;
 }
