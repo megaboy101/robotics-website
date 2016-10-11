@@ -1,44 +1,58 @@
+@import url(960-grid-system/reset.css);
+@import url(960-grid-system/text.css);
+@import url(960-grid-system/960.css);
+
 html {
   background-color: #c5b358;
+  /*background-image: url(../images/12_col.gif);*/
 }
 
 
 body {
-  
+
   margin-left: auto;
   margin-right: auto;
-  
+
   width: 960px;
-  height: 1000px;
-  
-  background-color: white;
-  
+
 }
 
 #navbar {
-  
-  width; 940px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 50px;
-  color: #c5b358;
-  
+  position: fixed;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+
+}
 li {
-  display: inline;
-  margin: 20px;
-  font-size: 20px;
+  float: left;
 }
 
-li.templist {
-  display: none;
-}
-
-a {
-  color: black;
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
-a :hover {
-  color: gray;
+
+li a:hover {
+  background-color: #c5b358;
+}
+
+
+
+.middle {
+  background-color: white;
+  font-size: 30px;
+  text-align: center;
+  height: 2000px;
+}
+.middle p {
+  margin-top: 50px;
 }
