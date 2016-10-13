@@ -14,7 +14,7 @@ body {
   margin-right: auto;
   background-color: #8a8a8a;
   width: 960px;
-  height: 2250px;
+  height: 2270px;
 
 }
 
@@ -43,7 +43,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #c5b358;
+  background-color: #8a8a8a;
 }
 
 .mainPicture {
@@ -51,9 +51,7 @@ li a:hover {
   height: 200px;
   margin: 50px 10px 10px 10px;
   
-  border-width: 10px;
-  border-style: solid;
-  border-color: ;
+  background-image: url("../images/12_col.gif");
   border-radius: 20px;
 }
 
@@ -62,6 +60,8 @@ li a:hover {
   font-size: 30px;
   text-align: center;
   height: 2000px;
+  border-radius: 20px;
+  
   
   
   
