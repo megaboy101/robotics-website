@@ -1,47 +1,33 @@
+// set the date we're counting down to
+var target_date = new Date("Mar 3, 2017").getTime();
+
+// variables for time units
+var days, hours, minutes, seconds;
+
+// get tag element
+var countdown = document.getElementById("countdown");
+
+// update the tag with id "countdown" every 1 second
+setInterval(function () {
+
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
 
 
-function getTimeRemaining(endtime){
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor( (t/1000) % 60 );
-  var minutes = Math.floor( (t/1000/60) % 60 );
-  var hours = Math.floor( (t/(1000*60*60)) % 24 );
-  var days = Math.floor( t/(1000*60*60*24) );
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
 
-function initializeClock(id, endtime){
-  var timeinterval = setInterval(updateClock,1000);
-  var clock = document.getElementById(id);
+    // format countdown string + set tag value
 
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+    countdown.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-
-  function updateClock(){
-    var t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if(t.total<=0){
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock(); // run function once at first to avoid delay
-  
-}
-
-var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
-
-initializeClock('clockdiv', deadline);
+}, 1000);
