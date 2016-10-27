@@ -28,6 +28,6 @@ setInterval(function () {
 
     // format countdown string + set tag value
 
-    countdown.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    clockdiv.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
 }, 1000);

@@ -6,21 +6,18 @@ html {
   /*background-color: #c5b358;*/
   /*background-image: url(../images/12_col.gif);*/
   /*background-color: #ebebeb;*/
+    
 }
 
-
 body {
-
   color: white;
   /*background-image: url("../images/12_col.gif");*/   /*Grid Display*/
   /*background-image: url("../images/background.png");*/  /*Light Background*/
   background-image: url("../images/dark-background.png");  /*Dark Background*/
-
   margin: 0px;
   text-align: center;
-  height: 100%;
-
-
+  
+    
 }
 
 body p {
@@ -28,17 +25,18 @@ body p {
   /*color: black;*/
   text-align: justify;
 }
+
 body h1,h2,h3,h4,h5,h6 {
   color: rgb(162, 182, 175);  /*Dark Background*/
   /*color: black;*/  /*Light Background*/
 }
+
 body h3 {
   text-align: left;
 }
 
-
 #header {
-  background-color: #C5B358;
+  background-color: rgba(197,179,88,0.76);
   padding: 0px;
   height: 100px;
   position: fixed;
@@ -51,7 +49,6 @@ body h3 {
   float: right;
   padding: 40px 0px 0px 0px;
   text-align: right;
-
 }
 
 #logo {
@@ -59,7 +56,6 @@ body h3 {
   height: 80px;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 #header a {
@@ -81,10 +77,9 @@ a:hover {
 }
 
 #news {
-
   margin-top: 20px;
-
 }
+
 #news p {
   text-align: justify;
 }
@@ -93,12 +88,10 @@ a:hover {
   text-align: left;
 }
 
-
 #sidebar {
   color: rgb(162, 182, 175);  /*Dark Background*/
   /*color: black;*/  /*Light Background*/
   margin-top: 20px;
-
 }
 
 #sidebar h3 {
@@ -106,12 +99,11 @@ a:hover {
 }
 
 #footer {
-  min-height: 3%;
-  background-color: #C5B358;
-  clear: both;
-  bottom: 0;
-
-
+    min-height: 3%;
+    background-color: rgba(197,179,88,0.76);
+    clear: both;
+    bottom: 0;
+    
 }
 
 #footer p {
