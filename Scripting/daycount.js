@@ -1,5 +1,5 @@
 // set the date we're counting down to
-var target_date = new Date("Mar 3, 2017").getTime();
+var target_date = new Date("Jan 1, 2017").getTime();
 
 // variables for time units
 var days, hours, minutes, seconds;
@@ -28,6 +28,16 @@ setInterval(function () {
 
     // format countdown string + set tag value
 
-    clockdiv.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
+     clockdiv.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    
+//     var daysSpan = clockdiv.querySelector('.days');
+//     var hoursSpan = clockdiv.querySelector('.hours');
+//     var minutesSpan = clockdiv.querySelector('.minutes');
+//     var secondsSpan = clockdiv.querySelector('.seconds');
+    
+//     daysSpan.innerHTML = t.days;
+//     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+//     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+//     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    
 }, 1000);

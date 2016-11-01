@@ -125,3 +125,9 @@ a:hover {
 .main-story {
   margin-top: 120px;
 }
+
+#clockdiv {
+    font-size: 28px;
+    color: rgba(197,179,88,0.76);
+    text-align: center;
+}
