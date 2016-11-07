@@ -5,8 +5,7 @@
 html {
   /*background-color: #c5b358;*/
   /*background-image: url(../images/12_col.gif);*/
-  /*background-color: #ebebeb;*/
-    
+  /*background-color: #ebebeb;*/ 
 }
 
 body {
@@ -16,8 +15,6 @@ body {
   background-image: url("../images/dark-background.png");  /*Dark Background*/
   margin: 0px;
   text-align: center;
-  
-    
 }
 
 body p {
@@ -111,6 +108,14 @@ a:hover {
   text-align: center;
 }
 
+#fixed-footer {
+    min-height: 3%;
+    background-color: rgba(197,179,88,0.76);
+    clear: both;
+    bottom: 0;
+    position: fixed;
+}
+
 #home-image {
   margin-top: 110px;
 }
@@ -123,11 +128,20 @@ a:hover {
 }
 
 .main-story {
-  margin-top: 120px;
+   margin-top: 30px; 
+}
+
+.temp-main-story {
+    margin-top: 120px;
 }
 
 #clockdiv {
     font-size: 28px;
     color: rgba(197,179,88,0.76);
     text-align: center;
+}
+
+.segment {
+    margin-top: 75px;
+    
 }
