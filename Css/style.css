@@ -101,7 +101,7 @@ a:hover {
   text-align: center;
 }
 
-.footer {
+/* .footer {
     min-height: 3%;
     background-color: rgba(197,179,88,0.76);
     clear: both;
@@ -110,14 +110,13 @@ a:hover {
 
 .footer p {
   color: black;
-  text-align: center;
+  text-align: left;
 }
 
 .fixed-footer {
   background-color: rgba(197,179,88,0.76);
-
 }
-
+ */
 .home-image {
   margin-top: 110px;
 }
@@ -163,4 +162,12 @@ a:hover {
 
 #founder {
     text-align: right;
+}
+
+.gallery-img img {
+    border: 1px solid;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    margin-bottom: 10px;
 }
