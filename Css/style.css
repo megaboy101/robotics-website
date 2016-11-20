@@ -2,6 +2,8 @@
 @import url(960-grid-system/text.css);
 @import url(960-grid-system/960.css);
 
+
+
 html {
   /*background-color: #c5b358;*/
   /*background-image: url(../images/12_col.gif);*/
@@ -9,7 +11,7 @@ html {
 }
 
 body {
-  color: white;
+  color: rgba(255, 255, 255, 0.09);
   /*background-image: url("../images/12_col.gif");*/   /*Grid Display*/
   /*background-image: url("../images/background.png");*/  /*Light Background*/
   background-image: url("../images/dark-background.png");  /*Dark Background*/
@@ -88,7 +90,8 @@ a:hover {
 }
 
 #news h3 {
-  text-align: left;
+    text-align: left;
+    color: rgb(162, 182, 175);
 }
 
 #sidebar {
@@ -99,6 +102,18 @@ a:hover {
 
 #sidebar h3 {
   text-align: center;
+}
+
+#sidebar ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar li {
+    display: block;
+    float: left;
 }
 
 /* .footer {
@@ -171,3 +186,16 @@ a:hover {
     -moz-border-radius: 20px;
     margin-bottom: 10px;
 }
+
+.icons {
+    color: rgba(197,179,88,0.76);
+}
+
+.icons:hover {
+    color: grey;
+}
+
+.sidebar-element {
+    margin-bottom: 20px;
+}
+
