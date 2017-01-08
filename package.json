@@ -30,6 +30,9 @@
   },
   "dependencies": {
     "express": "^4.14.0",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.9.0"
   }
