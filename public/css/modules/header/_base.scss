@@ -1,0 +1,23 @@
+@import 'title';
+
+header {
+	background-color: $primary-yellow;
+	display: flex;
+	flex-flow: row nowrap;
+
+	img {
+		height: 100vh;
+	}
+}
+
+@media screen and (max-width: 1175px) {
+	header {
+		position: relative;
+
+		img {
+			width: 100%;
+            min-width: 600px;
+			height: 100%;
+		}
+	}
+}

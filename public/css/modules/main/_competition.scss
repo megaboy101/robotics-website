@@ -1,0 +1,79 @@
+.competition {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	background-color: $darker-white;
+	padding-top: 0;
+
+	.explanation {
+		margin: 20px;
+		margin-bottom: 0;
+		flex: 1;
+
+		h1, blockquote {
+			text-align: right;
+		}
+
+		p {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-flow: row wrap;
+		align-content: flex-start;
+		overflow: hidden;
+		width: 60%;
+	}
+
+	li {
+		width: 33.3333%;
+		img {
+			width: 100%;
+			margin-bottom: -5px;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		.explanation {
+			h1 {
+				font-size: 35px;
+			}
+
+			blockquote {
+				font-size: 22px;
+			}
+
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1120px) {
+    .competition {
+        flex-flow: row wrap;
+
+        .explanation {
+
+            h1, blockquote, p {
+                max-width: 930px;
+            }
+
+            p {
+                padding-bottom: 15px;
+            }
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        li {
+            width: 33.3333%;
+        }
+    }
+}

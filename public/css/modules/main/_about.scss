@@ -1,0 +1,36 @@
+.about {
+	h1 {
+		@extend .layout-main-edgeMargin;
+		margin: 0 auto;
+	}
+
+	p {
+		@extend .layout-main-edgeMargin;
+	}
+
+	blockquote {
+		@extend .layout-main-edgeMargin;
+		margin: 20px auto;
+	}
+
+	img {
+		display: block;
+		width: 50%;
+		margin: 20px auto 30px auto;
+	}
+
+	@media screen and (max-width: 590px) {
+		h1 {
+			font-size: 38px;
+		}
+
+		blockquote {
+			font-size: 25px;
+		}
+
+		p {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}

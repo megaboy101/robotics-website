@@ -1,0 +1,39 @@
+@import 'about';
+@import 'team';
+@import 'competition';
+@import 'community';
+
+main {
+	margin: 30px 0;
+
+	blockquote {
+		color: $primary-grey;
+		font-size: 25px;
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	section {
+		padding-top: 50px;
+
+		h1 {
+			font-family: $font;
+			font-size: 45px;
+			text-align: center;
+			color: $lighter-black
+		}
+
+		h2 {
+			@extend h1;
+			font-size: 35px;
+			margin: 15px;
+		}
+
+		p {
+			margin: 35px auto;
+			font-family: $font;
+			font-size: 20px;
+			line-height:1.5;
+		}
+	}
+}
