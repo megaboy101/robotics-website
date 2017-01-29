@@ -4,9 +4,10 @@ header {
 	background-color: $primary-yellow;
 	display: flex;
 	flex-flow: row nowrap;
+    overflow: hidden;
 
 	img {
-		height: 100vh;
+		height: 650px;
 	}
 }
 
