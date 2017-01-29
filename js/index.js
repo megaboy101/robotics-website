@@ -1,4 +1,2 @@
-console.log("Connected");
-
-// Import css
+// Import css for webpack compiling
 require('../public/css/main.scss');

@@ -1,26 +1,28 @@
-// This config file is for the webpack dev server only, and is not required unless you're using it.
-
+// Standard node path module
 var path = require('path');
 
 module.exports = {
+    // Compiler entry point
 	entry: './index.js',
+
+    // Set compiler to only look in 'js' folder
 	context: path.resolve('js'),
 
-	devServer: {
-		contentBase: 'public'
-	},
-
+    // Compliler "loaders"
 	module: {
 		loaders: [
+            // Bundle regular css files
 			{test: /\.css$/, exclude: /node_modules/, loader: "style-loader!css-loader"},
+            // Compile and bundle scss files
 			{test: /\.scss$/, exclude: /node_modules/, loader: "style-loader!css-loader!sass-loader"},
+            // Compile image files
 			{test: /\.(png|jpg)$/, exclude: /node_modules/, loader: "url-loader"}
 		]
 	},
 
+    // Compiler output point
 	output: {
 		path: '/',
-		publicPath: path.resolve('/public/assets/js/'),
 		filename: 'bundle.js'
 	}
-}
+};

@@ -1,6 +1,6 @@
 {
   "name": "robotics-site",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Official landing page for the East Ridge High School \"Knight and Nerdy\" Robotics Team",
   "main": "index.html",
   "scripts": {
