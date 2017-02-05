@@ -1,10 +1,10 @@
 {
   "name": "robotics-site",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "description": "Official landing page for the East Ridge High School \"Knight and Nerdy\" Robotics Team",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server"
   },
   "repository": {
     "type": "git",

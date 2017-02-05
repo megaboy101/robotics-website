@@ -1,9 +1,15 @@
 // Standard node path module
 var path = require('path');
 
+var webpack = require('webpack');
+
 module.exports = {
     // Compiler entry point
-	entry: './index.js',
+	entry: {
+        home: './home.js',
+        gallery: './gallery.js',
+		calendar: './calendar.js'
+    },
 
     // Set compiler to only look in 'js' folder
 	context: path.resolve('js'),
@@ -20,9 +26,15 @@ module.exports = {
 		]
 	},
 
+    plugins: [
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.AggressiveMergingPlugin()
+    ],
+
     // Compiler output point
 	output: {
 		path: '/',
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
 	}
 };

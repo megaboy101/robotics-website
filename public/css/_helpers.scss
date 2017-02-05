@@ -4,3 +4,46 @@
 	max-width: 930px;
 	padding: 0 15px;
 }
+
+
+
+nav {
+    display: flex;
+    padding: 10px 30px;
+    background-color: $darker-black;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+
+    a {
+        color: $darker-white;
+        display: block;
+        text-decoration: none;
+        margin: 0 20px;
+    }
+
+    p {
+        display: none;
+        color: $darker-white;
+        text-decoration: none;
+        margin: 0 20px;
+        border: 1px solid $lighter-black;
+        border-radius: 3px;
+        padding: 2px 7px;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    nav {
+        justify-content: flex-start;
+
+        a {
+            display: none;
+        }
+
+        p {
+            display: block;
+        }
+    }
+}

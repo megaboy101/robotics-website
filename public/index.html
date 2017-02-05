@@ -11,6 +11,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
 </head>
 <body>
+	<nav>
+        <p class="hamburger">=</p>
+        <a href="/#about">About us</a>
+        <a href="/#team">The Team</a>
+        <a href="/#competition">Competitions</a>
+        <a href="/#community">Community</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/calendar">Calendar</a>
+        <a href="#">Support Us</a>
+    </nav>
+
 	<header>
 		<div class="title">
 			<h1>
@@ -26,18 +37,21 @@
 				</em>
 			</p>
 			<p>
-				(555) 555-5555 <br>
-				someemail@gmail.com
+				(407) 680-3485 <br>
+				team2797@gmail.com
 			</p>
 			<p>
 				Donate!
 			</p>
+            <p class="ad">
+                Explore Below!
+            </p>
 		</div>
 		<img src="/assets/landing-darker.png" alt="Robotics Icon">
 	</header>
 
 	<main>
-		<section class="about">
+		<section class="about" id="about">
 			<h1>
 				<i class="fa fa-flip-horizontal fa-wrench" aria-hidden="true"></i>
 				Our Mission
@@ -58,7 +72,7 @@
 			<img src="/assets/icon.jpg" alt="Robotics Logo">
 		</section>
 
-		<section class="team">
+		<section class="team" id="team">
 			<h1>
 				<i class="fa fa-users" aria-hidden="true"></i>
 				Our Team
@@ -111,12 +125,12 @@
 			</div>
 		</section>
 
-		<section class="competition">
+		<section class="competition" id="competition">
 			<div class="explanation">
 				<h1>In Competition</h1>
 				<blockquote>
-					"It's fun to learn, but it's more fun to win"<br>
-					- Alex Vila, Vice President
+					"Competition is exciting because you get to see all your hard work pay off!"<br>
+					- Gabriella DeAngelo, Officer
 				</blockquote>
 				<p>
 					FIRST focuses on sparking the minds of students in science and technology
@@ -140,7 +154,7 @@
 			</ul>
 		</section>
 
-		<section class="community">
+		<section class="community" id="community">
 			<h1>
 				<i class="fa fa-heart" aria-hidden="true"></i>
 				In the Community
@@ -148,32 +162,19 @@
 			</h1>
 			<ul>
 				<li>
-					<img src="/assets/community-gallery/stand.jpg">
 					<div class="content">
-						<h2>Lost Lake Elementary</h2>
+						<h2>Sawgrass Bay Elementary</h2>
 						<p>
-							Michael has been an electrical engineer for 23 years, 11 of those years
-							working at Walt Disney World. After holding many different job titles
-							and working on many different jobs he is currently a Team Lead for Ride
-							and Show controls. He has been volunteering with FIRST for 9 years. Mentoring
-							our team, FRC Team 2797 for the past 4 years. He provides insight on new
-							engineering techniques and helps to train students on best engineering
-							practices, resulting in the best possible robot. He also helps to facilitate
-							the engineering mindset and to encourage celebration of innovation,
-						</p>
-					</div>
-				</li>
-				<li>
-					<div class="content">
-						<h2>Windy Hill Middle</h2>
-						<p>
-							Frank started getting involved when his oldest daughter was a freshman
-							(2012) and has been volunteering since. Although he doesn't have a degree
-							in engineering he does have experience with both electrical and mechanical
-							systems along with woodworking; resulting in our imagery award at our
-							Orlando Regional competition, creating the 'ye old bot cart' out of wood.
-							He helps the team brainstorm and encourage them to think differently.
-							He inspires the kids to do their best and to be proud of their work.
+                            <!--
+							Mentor elementray team (bobcat builders, 1st year), made it to finals
+                            stem nights, demonstartions, challenges, encouragement
+                            Motivating mentors "youth club" demonstrations
+                        -->
+                            The team regularly visits the school to give demonstrations, help clubs, and
+                            provide other volunteer work. This year the team has primarily been aiding Sawgrass'
+                            own robotics club, The Bobcat Builders, organized just this year. The school also
+                            hosts regular STEM nights for students and parents, where the team shows off their
+                            robot and motivates children to pursue STEM related activities.
 						</p>
 					</div>
 					<img src="/assets/community-gallery/school.jpg">
@@ -183,7 +184,7 @@
 	</main>
 
     <!-- Link to compiled files, must be at bottom of page to prevent errors -->
-	<script src="/public/assets/js/bundle.js"></script>
+	<script src="/public/assets/js/home.bundle.js"></script>
     <!-- Link to icon files -->
 	<script src="https://use.fontawesome.com/97626362ab.js"></script>
 </body>

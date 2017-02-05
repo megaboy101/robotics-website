@@ -1,0 +1,29 @@
+body {
+    background-color: $lighter-white;
+}
+
+h1 {
+    font-family: $font;
+    font-size: 65px;
+    text-align: center;
+    color: $lighter-black;
+    padding: 55px 0 15px 0;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 5%;
+
+    li {
+        list-style-type: none;
+        width: 20%;
+        margin: 7px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
