@@ -1,7 +1,9 @@
 /* Main scss file, condenses all partial files */
-
 @import 'variables';
 @import 'reset';
 @import 'helpers';
 @import 'homePage/header/base';
 @import 'homePage/main/base';
+@import 'galleryPage/collage';
+@import 'calendarPage/base';
+@import 'supportPage/base';
