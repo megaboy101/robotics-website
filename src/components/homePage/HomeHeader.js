@@ -20,11 +20,9 @@ const HomeHeader = () =>
 				(407) 680-3485 <br/>
 				team2797@gmail.com
 			</p>
-			<p>
-				Donate!
-			</p>
 			<p className="ad">
-			 	Explore Below!
+			 	Explore Below! <br/>
+				<i className="fa fa-angle-down" aria-hidden="true"></i>
 			</p>
 		</div>
 		<img src={landingDarker} alt="Robotics Icon" />

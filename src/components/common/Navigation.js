@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Navigation = () =>
 	<nav>
-		<p className="hamburger">=</p>
+		<i className="fa fa-bars" aria-hidden="true"></i>
 		<a href="/#about">About us</a>
 		<a href="/#team">The Team</a>
 		<a href="/#competition">Competitions</a>

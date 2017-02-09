@@ -1,12 +1,13 @@
 #calendarPage {
 	background-color: $lighter-white;
-	
+
 	h1 {
 	    font-family: $font;
-	    font-size: 65px;
 	    text-align: center;
 	    color: $lighter-black;
 	    padding: 55px 0 15px 0;
+		font-weight: 400;
+		font-size: 48px;
 	}
 
 	iframe {

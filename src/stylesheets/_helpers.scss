@@ -24,18 +24,17 @@ nav {
         margin: 0 20px;
     }
 
-    p {
+    .fa-bars {
         display: none;
         color: $darker-white;
         text-decoration: none;
         margin: 0 20px;
-        border: 1px solid $lighter-black;
         border-radius: 3px;
         padding: 2px 7px;
     }
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 885px) {
     nav {
         justify-content: flex-start;
 
@@ -43,7 +42,7 @@ nav {
             display: none;
         }
 
-        p {
+        .fa-bars {
             display: block;
         }
     }
