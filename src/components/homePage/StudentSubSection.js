@@ -2,7 +2,7 @@ import React from 'react';
 
 const StudentSubSection = () =>
 	<div>
-			<h2>Students</h2>
+			<h2>Student Teams</h2>
 			<div className="teams">
 				<div className="mechanical">
 					<i className="fa fa-cogs" aria-hidden="true"></i>
