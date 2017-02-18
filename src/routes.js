@@ -4,12 +4,14 @@ import HomePage from './components/homePage/HomePage.js';
 import CalendarPage from './components/calendarPage/CalendarPage.js';
 import GalleryPage from './components/galleryPage/GalleryPage.js';
 import SupportPage from './components/supportPage/SupportPage.js';
+import ErrorPage from './components/errorPage/ErrorPage.js';
 
 export default (
-	<Router history = {browserHistory}>
-		<Route path={'/'} component={HomePage} />
-		<Route path={'/calendar'} component={CalendarPage} />
-		<Route path={'/gallery'} component={GalleryPage} />
-		<Route path={'/support'} component={SupportPage} />
+	<Router history={browserHistory}>
+		<Route path="/" component={HomePage} />
+		<Route path="/calendar" component={CalendarPage} />
+		<Route path="/gallery" component={GalleryPage} />
+		<Route path="/support" component={SupportPage} />
+		<Route path="*" component={ErrorPage} />
 	</Router>
 );

@@ -83,20 +83,34 @@
 		.contact-info {
 			display: flex;
 			flex-flow: row wrap;
-			width: 950px;
-			margin: 20px auto;
-			text-align: center;
+			justify-content: space-around;
 
 			p {
 				font-family: $font;
 				font-size: 20px;
-				flex: 1;
+				margin: 20px 0;
 
 				span {
 					background-color: $primary-yellow;
 					padding: 5px;
 					border-radius: 3px;
 					margin: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 445px) {
+	#supportPage {
+		footer {
+			h1 {
+				font-size: 32px;
+			}
+
+			.contact-info {
+				p {
+					font-size: 14px;
 				}
 			}
 		}

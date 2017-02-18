@@ -5,17 +5,22 @@
 	padding: 0 15px;
 }
 
-
+.displayModifier {
+	display: flex;
+}
 
 nav {
-    display: flex;
     padding: 10px 30px;
     background-color: $darker-black;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
     position: fixed;
 	z-index: 10;
     width: 100%;
+
+	#dropdown {
+	    display: flex;
+		flex-flow: row nowrap;
+	    justify-content: flex-end;
+	}
 
     a {
         color: $darker-white;
@@ -34,16 +39,57 @@ nav {
     }
 }
 
+/* Styles for big navigation */
+@media screen and (min-width: 886px) {
+	nav {
+	    padding: 10px 30px;
+
+		#dropdown {
+		    display: flex;
+			flex-flow: row nowrap;
+		    justify-content: flex-end;
+		}
+
+		a {
+			color: $darker-white;
+			display: block;
+			text-decoration: none;
+			margin: 0 20px;
+		}
+
+		.fa-bars {
+			display: none;
+			color: $darker-white;
+			text-decoration: none;
+			margin: 0 20px;
+			border-radius: 3px;
+			padding: 2px 7px;
+		}
+	}
+}
+
+/* Styles for dropdown navigation */
 @media screen and (max-width: 885px) {
     nav {
-        justify-content: flex-start;
+		padding: 0;
+		padding-top: 10px;
 
-        a {
-            display: none;
-        }
+		#dropdown {
+			flex-flow: column nowrap;
+	        justify-content: flex-start;
+			display: none;
+		}
+
+		a {
+			background-color: $lighter-black;
+			border-bottom: 2px solid $darker-black;
+			padding: 5px 20px;
+			margin: 0;
+		}
 
         .fa-bars {
             display: block;
+			margin-bottom: 10px;
         }
     }
 }
