@@ -5,7 +5,7 @@ import path from 'path';
 import favicon from 'serve-favicon';
 import config from '../webpack.config.dev.js';
 
-const port = 3000;
+const port = process.env.PORT || 3000;;
 const app = express();
 const compiler = webpack(config);
 
