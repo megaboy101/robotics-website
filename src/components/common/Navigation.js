@@ -13,15 +13,17 @@ class Navigation extends Component {
 	}
 
 	toggleDropdown() {
-		let dropdown = document.getElementById('dropdown');
+		if (window.innerWidth <= 885) {
+			let dropdown = document.getElementById('dropdown');
 
-		if (this.state.dropDownActive) {
-			dropdown.style.display = 'none';
-			this.setState({dropDownActive: false});
-		}
-		else {
-			dropdown.style.display = 'flex';
-			this.setState({dropDownActive: true});
+			if (this.state.dropDownActive) {
+				dropdown.style.display = 'none';
+				this.setState({dropDownActive: false});
+			}
+			else {
+				dropdown.style.display = 'flex';
+				this.setState({dropDownActive: true});
+			}
 		}
 	}
 
