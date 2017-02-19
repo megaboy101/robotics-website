@@ -12,7 +12,10 @@
     "build-html": "babel-node build-tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist build-html",
     "build": "babel-node build-tools/build.js",
-    "postbuild": "babel-node build-tools/prodServer.js"
+    "postbuild": "babel-node build-tools/prodServer.js",
+	"precompile": "node_modules/.bin/npm-run-all clean-dist build-html",
+	"compile": "node_modules/.bin/babel-node build-tools/build.js",
+	"postinstall": "npm run compile"
   },
   "repository": {
     "type": "git",
