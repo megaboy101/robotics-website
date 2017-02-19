@@ -13,5 +13,6 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
 		if (err)
 			console.log(err);
 		console.log('HTML file written to /dist');
+		console.log(__dirname);
 	});
 });
