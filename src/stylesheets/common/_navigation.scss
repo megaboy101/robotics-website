@@ -1,14 +1,3 @@
-/* Small reusable css helper class, adds edge-padding on main content */
-
-.layout-main-edgeMargin {
-	max-width: 930px;
-	padding: 0 15px;
-}
-
-.displayModifier {
-	display: flex;
-}
-
 nav {
     padding: 10px 30px;
     background-color: $darker-black;

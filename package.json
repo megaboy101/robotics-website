@@ -4,18 +4,16 @@
   "description": "Official landing page for the East Ridge High School \"Knight and Nerdy\" Robotics Team",
   "main": "index.html",
   "scripts": {
-    "start": "npm-run-all --parallel lint start-server",
-    "lint": "eslint src build-tools webpack.config.dev.js",
-    "start-server": "babel-node build-tools/server",
+    "start": "babel-node build-tools/server",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "build-html": "babel-node build-tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist build-html",
     "build": "babel-node build-tools/build.js",
     "postbuild": "babel-node build-tools/prodServer.js",
-	"precompile": "node_modules/.bin/npm-run-all clean-dist build-html",
-	"compile": "node_modules/.bin/babel-node build-tools/build.js",
-	"postinstall": "npm run compile"
+    "precompile": "node_modules/.bin/npm-run-all clean-dist build-html",
+    "compile": "node_modules/.bin/babel-node build-tools/build.js",
+    "postinstall": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -34,6 +32,7 @@
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
     "cheerio": "^0.22.0",
+    "colors": "^1.1.2",
     "compression": "^1.6.2",
     "css-loader": "^0.26.1",
     "express": "^4.14.1",
@@ -43,6 +42,7 @@
     "npm-run-all": "^4.0.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-icons": "^2.2.3",
     "react-router": "^3.0.2",
     "sass-loader": "^4.1.1",
     "serve-favicon": "^2.3.2",

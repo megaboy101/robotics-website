@@ -4,6 +4,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import path from 'path';
 import favicon from 'serve-favicon';
 import config from '../webpack.config.dev.js';
+import colors from 'colors';
 
 const port = process.env.PORT || 3000;;
 const app = express();
@@ -22,5 +23,5 @@ app.get('*', (req, res) => {
 
 /* eslint-disable no-console */
 app.listen(port, () => {
-	console.log(`Server online on port: ${port}`);
+	console.log(`Server starting on port ${port}, please wait for Webpack`.blue);
 });

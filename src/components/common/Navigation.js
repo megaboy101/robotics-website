@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Bars from 'react-icons/lib/fa/bars';
 
 class Navigation extends Component {
 	constructor(props, context) {
@@ -30,7 +31,7 @@ class Navigation extends Component {
 	render() {
 		return (
 			<nav>
-				<i className="fa fa-bars" onClick={this.toggleDropdown} aria-hidden="true"></i>
+				<Bars className="fa-bars"  onClick={this.toggleDropdown} />
 				<div id="dropdown">
 					<a onClick={this.toggleDropdown} href="/#about">About us</a>
 					<a onClick={this.toggleDropdown} href="/#team">The Team</a>
