@@ -1,7 +1,7 @@
 import React from 'react';
-import King from '../../assets/mentor-pics/mentor-king.png';
-import DeTuro from '../../assets/mentor-pics/mentor-deturo.png';
-import Sigmund from '../../assets/mentor-pics/mentor-sigmund.png';
+import King from '../../assets/mentor-pics/mentor_2.png';
+import DeTuro from '../../assets/mentor-pics/mentor_3.png';
+import Sigmund from '../../assets/mentor-pics/mentor_1.png';
 
 const MentorSubSection = () =>
 	<div>
