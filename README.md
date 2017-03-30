@@ -8,10 +8,7 @@ To start developing:
 
 # Priority List:
 
-1. Get new mentor pics
-2. Set-up patreon account (Evan)
-3. Organize/standardize html/css
-4. Write documentation
+1. Set-up patreon account (Evan)
 
 
 # Project files Breakdown

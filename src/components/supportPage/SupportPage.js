@@ -1,40 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { get_supportPage } from '../../api/api.js';
 import Navigation from '../common/Navigation.js';
+import DonationCard from './DonationCard.js';
 
-const SupportPage = () =>
-	<div id="supportPage">
-		<Navigation />
+class SupportPage extends Component {
+	constructor(props) {
+		super(props);
 
-		<h1>Support Us</h1>
-		<main>
-			<div className="donate-tile donate-free">
-				<p>Shoutout</p>
-				<h2>Free</h2>
-				<p className="sub-text">
-					Throw us a quick thumbs up,<hr/>
-					we really appreciate the feedback
-				</p>
-				<button>THUMBS UP!</button>
-			</div>
-			<div className="donate-tile donate-premium">
-				<p>Donate</p>
-				<h2>$50</h2>
-				<p className="sub-text">
-					We humbly accept any donations, <hr/>
-					Thank you for your support!
-				</p>
-				<button>Donate!</button>
-			</div>
-		</main>
+		this.state = {email: '', header: '', paymentMethods: []};
+	}
 
-		<footer>
-			<h1>Any questions? We are here for you</h1>
-			<div className="contact-info">
-				<p>Contact us: <span>team2797@gmail.com</span></p>
-				<p>Social Media:</p>
+	componentDidMount() {
+		get_supportPage()
+		.then(content => {
+			this.setState({
+				email: content.email,
+				header: content.header,
+				paymentMethods: content.paymentMethods
+			});
+		});
+	}
+
+	render() {
+		let id = 0;
+		let paymentHtml = this.state.paymentMethods.map(method => {
+			id++;
+			return(
+				<DonationCard
+					key={id}
+					amount={method.fields.amount}
+					buttonContent={method.fields.buttonContent}
+					upperRemark={method.fields.upperRemark}
+					lowerRemark={method.fields.lowerRemark}
+					title={method.fields.title} />
+			);
+		});
+
+		return (
+			<div id="supportPage">
+				<Navigation />
+
+				<h1>{this.state.header}</h1>
+				<main>
+					{paymentHtml}
+				</main>
+
+				<footer>
+					<h1>Any questions? We are here for you</h1>
+					<div className="contact-info">
+						<p>Contact us: <span>{this.state.email}</span></p>
+					</div>
+				</footer>
 			</div>
-		</footer>
-	</div>
+		);
+	}
+}
 
 
 export default SupportPage;

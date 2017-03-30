@@ -1,31 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { get_teams } from '../../api/api.js';
 
-const StudentSubSection = () =>
-	<div>
-			<h2>Student Teams</h2>
-			<div className="teams">
-				<div className="mechanical">
-					<i className="fa fa-cogs" aria-hidden="true"></i>
-					<h3>Mechanical</h3>
-					<p>
-						Our mechanical team focuses on hardware and construction; it’s
-						structure, it’s moving parts, and it’s maintenance. This team
-						studies the applications of pneumatics, motors, and gearboxes,
-						along with engineering design and physics.
-					</p>
+class StudentSubSection extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			teams: [
+				{header: '', description: ''},
+				{header: '', description: ''}
+			]
+		};
+	}
+
+	componentDidMount() {
+		get_teams().then(teams => {
+			this.setState({teams});
+		});
+	}
+
+	render() {
+		return (
+			<div>
+				<h2>Student Teams</h2>
+				<div className="teams">
+					<div className="mechanical">
+						<i className="fa fa-cogs" aria-hidden="true"></i>
+						<h3>{this.state.teams[0].header}</h3>
+						<p>
+							{this.state.teams[0].description}
+						</p>
+					</div>
+					<div className="programming">
+						<i className="fa fa-code" aria-hidden="true"></i>
+						<h3>{this.state.teams[1].header}</h3>
+						<p>
+							{this.state.teams[1].description}
+						</p>
+					</div>
 				</div>
-			<div className="programming">
-				<i className="fa fa-code" aria-hidden="true"></i>
-				<h3>Electrical/Programming</h3>
-				<p>
-					Our electronics team is divided into electrical engineering and
-					computer programming. These sister disciplines work in tandem to
-					give function and life to projects. The team programs in primarily
-					Java and is regularly involved in computers.
-				</p>
 			</div>
-		</div>
-	</div>;
+		);
+	}
+}
 
 
 export default StudentSubSection;

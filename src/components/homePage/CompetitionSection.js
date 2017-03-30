@@ -1,26 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { get_competitionSection } from '../../api/api.js';
 import CompetitionCollage from './CompetitionCollage.js';
 
-const CompetitionSection = () =>
-	<section className="competition" id="competition">
-		<div className="explanation">
-			<h1>In Competition</h1>
-			<blockquote>
-				"Competition is exciting because you get to see all your hard work pay off!"<br/>
-				- Gabriella DeAngelo, Officer
-			</blockquote>
-			<p>
-				FIRST focuses on sparking the minds of students in science and technology
-				while preparing them with life skills. FIRST has two core values, GraciouS
-				Professionalism (GP) and Coopertition. GP encourages high quality work,
-				emphasizes the value of others, and respects individuals throughout the
-				competition. Coopertition is displaying unqualified kindness and respect
-				in the face of fierce competition.
-			</p>
-		</div>
+class CompetitionSection extends Component {
+	constructor(props) {
+		super(props);
 
-		<CompetitionCollage />
-	</section>;
+		this.state = {description: '', header: '', quote: '', quoteAuthor: '', images: []};
+	}
 
+	componentDidMount() {
+		get_competitionSection()
+		.then(content => {
+			this.setState({
+				description: content.description,
+				header: content.header,
+				quote: content.quote,
+				quoteAuthor: content.quoteAuthor,
+				images: content.images.map(image => image.fields.file.url)
+			});
+		});
+	}
+
+	render() {
+		return (
+			<section className="competition" id="competition">
+				<div className="explanation">
+					<h1>{this.state.header}</h1>
+					<blockquote>
+						{this.state.quote}<br />
+						- {this.state.quoteAuthor}
+					</blockquote>
+					<p>
+						{this.state.description}
+					</p>
+				</div>
+
+				<CompetitionCollage images={this.state.images} />
+			</section>
+		);
+	}
+}
 
 export default CompetitionSection;

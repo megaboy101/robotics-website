@@ -1,7 +1,8 @@
-import React from 'react';
-import schoolImage from '../../assets/community-gallery/school.jpg';
+import React, { Component } from 'react';
+import { get_communitySection } from '../../api/api.js';
+import CommunityStory from './CommunityStory.js';
 
-const CommunitySection = () =>
+/*const CommunitySection = () =>
 	<section className="community" id="community">
 		<h1>
 			<i className="fa fa-heart" aria-hidden="true"></i>
@@ -23,7 +24,51 @@ const CommunitySection = () =>
 				<img src={schoolImage} />
 			</li>
 		</ul>
-	</section>;
+	</section>;*/
 
+class CommunitySection extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {header: '', stories: []};
+	}
+
+	componentDidMount() {
+		get_communitySection()
+		.then(content => {
+			this.setState({
+				header: content.header,
+				stories: content.stories.map(story => story.fields)
+			});
+		});
+	}
+
+	render() {
+		let id = 0;
+		let storyHtml = this.state.stories.map(story => {
+			id++;
+			return (
+				<CommunityStory
+					key={id}
+					title={story.title}
+					description={story.description}
+					image={story.image.fields.file.url} />
+			);
+		});
+
+		return (
+			<section className="community" id="community">
+				<h1>
+					<i className="fa fa-heart" aria-hidden="true"></i>
+					{this.state.header}
+					<i className="fa fa-heart" aria-hidden="true"></i>
+				</h1>
+				<ul>
+					{storyHtml}
+				</ul>
+			</section>
+		);
+	}
+}
 
 export default CommunitySection;

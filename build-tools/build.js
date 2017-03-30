@@ -9,7 +9,7 @@ webpack(config).run((err, stats) => {
 	if (err) {
 		console.error(err);
 		return 1;
-	};
+	}
 
 	const jsonStats = stats.toJson();
 
